@@ -12,6 +12,19 @@
   <body>
       <header>
       <%=render 'layouts/navbar' %>
+      <% flash.each do |key, message| %>
+        <div class="container">
+          <div class="container-errors">
+            <div class="col s12 m12 l12">
+              <div class="card-panel green lighten-2" id="fade-out-target">
+                <span class="white-text">
+                  <%= message %>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </header>
     <main>
       <div class="container">

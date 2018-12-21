@@ -1,9 +1,10 @@
 <nav>
   <div class="container1">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">UniTech</a>
+      <a href="<%= root_path %>" class="brand-logo">UniTech</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%=link_to 'New', new_student_path %></li>        
         <li><a href="#">Courses</a></li>
         <li><a href="badges#">Enrollment</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
