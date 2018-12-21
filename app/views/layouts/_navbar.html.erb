@@ -1,14 +1,8 @@
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-
 <nav>
   <div class="container">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">UniTech</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Courses</a></li>
         <li><a href="badges#">Enrollment</a></li>
@@ -17,3 +11,21 @@
     </div>
   </div>
 </nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="#">Courses</a></li>
+  <li><a href="#">Enrollment</a></li>
+  <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li><a href="#!">three</a></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li><a href="#!">three</a></li>
+</ul>
