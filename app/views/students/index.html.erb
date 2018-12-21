@@ -32,7 +32,7 @@
   </thead>
 
   <tbody>
-	  <% @students.each do |student| %>
+	  <% Student.order(:name).each do |student| %>
       <tr>
         <td><%= student.name%></td>
         <td><%= student.email%></td>
