@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col s12">
+		<h3 class="center-align">Sign up</h3>
+	</div>
+</div>
+
+<div class="center-align container-signup-form">
+	<div class="row center">
+		<div class="col s12 m12 l12">
+				<div class="row">
+
+				<%= form_for(@student, html: {class: "col s12"}) do |f| %>
+					<div class="row">
+						<div class="input-field col s12">
+							<%= f.text_field :name, placeholder: "Enter your full name", autofocus: true %>
+							<%= f.label :name %>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<%= f.email_field :email, placeholder: "Enter your email address", autofocus: true %>
+							<%= f.label :email %>
+						</div>
+					</div>
+					
+					<%= f.submit "Submit", class: "btn orange waves-effect waves-light "%>
+				<% end %>
+				
+				</div>
+		</div>
+	</div>
+</div>
