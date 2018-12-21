@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col s12">
+		<h3 class="center-align">Students</h3>
+	</div>
+</div>
+
+
+<div class="row">
+  <% @students.each do |student| %>
+	  <div class="col s6 m4">
+	    <div class="card blue-grey darken-1">
+	      <div class="card-content white-text">
+	        <span class="card-title"><%= student.name%></span>
+	        <p><b>Email:</b><i> <%= student.email %> </i></p>
+	        <p><b>Course Enrollments:</b> None</p>
+	      </div>
+	      <div class="card-action">
+	        <a href="#">View Profile</a>
+	      </div>
+	    </div>
+	  </div>
+  <% end %>
+</div>
+
+<table class="centered center-align responsive-table">
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course Enrollments</th>
+        <th>View Profile</th>
+    </tr>
+  </thead>
+
+  <tbody>
+	  <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name%></td>
+        <td><%= student.email%></td>
+        <td>None</td>
+        <td><a href="#">View Profile</a></td>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>
+
