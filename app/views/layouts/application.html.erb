@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UniveristyApp</title>
+    <title>UniTech</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,9 +10,16 @@
   </head>
 
   <body>
-    <%= link_to 'Home', root_path %>
-    <%= link_to 'About', about_path %>
-    <%= link_to 'New Course', courses_new_path %>
-    <%= yield %>
+      <header>
+      <%=render 'layouts/navbar' %>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+      <%=render 'layouts/footer' %>
+    </footer>
   </body>
 </html>
