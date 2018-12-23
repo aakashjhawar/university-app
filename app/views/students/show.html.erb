@@ -10,7 +10,9 @@
 					<p>Current Enrollments: None</p>
 	      </div>
 	    </div>
-	    <%= link_to '<i class="material-icons right">create</i>Edit your profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light"%>
+	    <% if current_user == @student %>
+		    <%= link_to '<i class="material-icons right">create</i>Edit your profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light"%>
+	  	<% end %>
 	  </div>
 	</div>
 </div>
