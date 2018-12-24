@@ -7,7 +7,17 @@
 	        <!-- <p><b>Course Enrollments:</b> None</p> -->
 	      </div>
 	      <div class="card-action white-text">
-					<p>Current Enrollments: None</p>
+					<p><b>Current Enrollments:</b> 
+						<% if @student.courses.empty? %>
+							None
+						<% else %>
+							<ol>
+								<% @student.courses.each do |course| %>
+									<li> <%= course.name %> </li>
+								<% end %>
+							</ol>
+						<% end %>
+					</p>
 	      </div>
 	    </div>
 	    <% if current_user == @student %>

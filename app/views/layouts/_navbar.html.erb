@@ -25,10 +25,16 @@
 
 <ul id="dropdown1" class="dropdown-content">
   <li> <%= session_link %> </li>
+  <% if logged_in? %>
+    <li> <%= link_to 'My profile', student_path(current_user) %> </li>
+  <% end %>
   <li><a href="#!">three</a></li>
 </ul>
 
 <ul id="dropdown2" class="dropdown-content">
   <li> <%= session_link %> </li>
+  <% if logged_in? %>
+    <li> <%= link_to 'My profile', student_path(current_user) %> </li>
+  <% end %>
   <li><a href="#!">three</a></li>
 </ul>
