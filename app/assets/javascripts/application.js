@@ -21,4 +21,16 @@ $(document).on('turbolinks:load', function() {
 	$(".dropdown-trigger").dropdown();
   $('.sidenav').sidenav();
   $('#fade-out-target').fadeOut(4000);
+  $('.carousel').carousel();
+  $('.parallax').parallax();
 })
+
+ $('.carousel.carousel-slider').carousel({
+    fullWidth: true
+  });
+
+   $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+        

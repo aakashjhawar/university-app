@@ -6,16 +6,17 @@
   width: 90%;
 }
 
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 75%;
-  }
+.container {
+  width: 75%;
 }
 
-@media only screen and (min-width: 993px) {
-  .container1 {
-    width: 90%;
-  }
+.container1 {
+  width: 90%;
+}
+
+.container2.container1 {
+  width: 100% !important;
+  heigth: 50%;
 }
 
 .sign-up-form {
