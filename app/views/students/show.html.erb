@@ -1,28 +1,27 @@
- <div class="row top-padding">
+<div class="row top-padding">
  	<div class="col s6 m6">
-	    <div class="card blue-grey darken-1">
-	      <div class="card-content white-text">
-	        <span class="card-title"><%= @student.name%></span>
-	        <p><b>Email:</b><i> <%= @student.email %> </i></p>
-	        <!-- <p><b>Course Enrollments:</b> None</p> -->
-	      </div>
-	      <div class="card-action white-text">
-					<p><b>Current Enrollments:</b> 
-						<% if @student.courses.empty? %>
-							None
-						<% else %>
-							<ol>
-								<% @student.courses.each do |course| %>
-									<li> <%= course.name %> </li>
-								<% end %>
-							</ol>
-						<% end %>
-					</p>
-	      </div>
-	    </div>
-	    <% if current_user == @student %>
-		    <%= link_to '<i class="material-icons right">create</i>Edit your profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light"%>
-	  	<% end %>
-	  </div>
-	</div>
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title"><%= @student.name%></span>
+        <p><b>Email:</b><i> <%= @student.email %> </i></p>
+        <!-- <p><b>Course Enrollments:</b> None</p> -->
+      </div>
+      <div class="card-action white-text">
+				<p><b>Current Enrollments:</b> 
+					<% if @student.courses.empty? %>
+						None
+					<% else %>
+						<ol>
+							<% @student.courses.each do |course| %>
+								<li> <%= course.name %> </li>
+							<% end %>
+						</ol>
+					<% end %>
+				</p>
+      </div>
+    </div>
+    <% if current_user == @student %>
+	    <%= link_to '<i class="material-icons right">create</i>Edit your profile'.html_safe, edit_student_path(@student), class: "btn orange waves-effect waves-light"%>
+  	<% end %>
+  </div>
 </div>
